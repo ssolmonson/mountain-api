@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class MountainsController < OpenReadController
-  before_action :set_mountain, only: %i[show update destroy]
+  before_action :set_mountain, only: %i[update destroy]
 
   # GET /mountains
   def index
@@ -17,7 +17,7 @@ class MountainsController < OpenReadController
 
   # POST /mountains
   def create
-    @mountain = Mountain.new(mountain_params)
+    @mountain = current_user.mountains.build(mountain_params)
 
     if @mountain.save
       render json: @mountain, status: :created, location: @mountain
@@ -38,13 +38,15 @@ class MountainsController < OpenReadController
   # DELETE /mountains/1
   def destroy
     @mountain.destroy
+
+    head :no_content
   end
 
   private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_mountain
-    @mountain = Mountain.find(params[:id])
+    @mountain = current_user.mountains.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
