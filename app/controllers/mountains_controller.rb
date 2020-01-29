@@ -55,6 +55,7 @@ class MountainsController < OpenReadController
                                      :difficulty,
                                      :conditions,
                                      :runs_made,
-                                     :date_of_visit)
+                                     :date_of_visit,
+                                     :user_id)
   end
 end
