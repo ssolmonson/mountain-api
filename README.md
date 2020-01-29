@@ -28,7 +28,7 @@ As a user I want to share my log with my friends to give them recomendation base
 What tables will you need? What will the columns on the table be?
 
 ```md
-The first iteration of my project will feature a users table and a mountains table. A user has many mountains. The users table will contain wi a first name, last name, and email (and possibly a nickname). The mountains table with have the name of the mountain, location, vertical rise, difficulty, date visited, conditions, and a small review/description with a possible optional field for stats (maybe just a runs taken field at the start). Advanced goals have a seperate stats table, and location table, with the stats table being able to track certain data and possibly include charts/graphs (Given that way beyond my basic scope)
+The first iteration of my project will feature a users table and a mountains table. A user has many mountains. The users table will contain wi a first name, last name, and email (and possibly a nickname). The mountains table with have the name of the mountain, location, vertical drop, difficulty, date visited, conditions, and a small review/description with a possible optional field for stats (maybe just a runs taken field at the start). Advanced goals have a seperate stats table, and location table, with the stats table being able to track certain data and possibly include charts/graphs (Given that way beyond my basic scope)
 ```
 
 ## Create an ERD (entity relationship diagram)
